@@ -1,0 +1,25 @@
+Contact Form 7 -> Contact -> Add New. Title it exactly: Contact form 1
+Paste into the "Form" tab (keep field names your-interest, your-scope, your-estimate for the live estimator).
+In the Mail tab add [your-interest], [your-scope] and [your-estimate] to the message body.
+
+<div class="vertex-cf7-row">
+<label>Full Name *
+[text* your-name autocomplete:name placeholder "John Doe"]</label>
+<label>Work Email *
+[email* your-email autocomplete:email placeholder "john@company.com"]</label>
+</div>
+<div class="vertex-cf7-row">
+<label>Primary Interest
+[select your-interest "Digital Transformation" "Cloud Architecture" "Strategic Consulting"]</label>
+<label>Estimated Scope (Hours)
+[range your-scope min:10 max:200 step:1 "50"]
+<span class="vertex-range-scale"><span>10 hrs</span><span class="vertex-range-value">50 hrs</span><span>200 hrs</span></span></label>
+</div>
+<div class="vertex-estimate" data-rates="150,180,200" data-thresholds="70,140" data-currency="USD" data-hours-label="hrs" data-tiers="Standard Accelerator|Enterprise Transformation|Full Scale Infrastructure">
+<div><span class="vertex-estimate__label">Estimated Project Tier</span><strong class="vertex-estimate__tier">Standard Accelerator</strong></div>
+<strong class="vertex-estimate__cost">$7,500</strong>
+</div>
+[hidden your-estimate]
+<label>Project Message *
+[textarea* your-message x4 placeholder "Briefly describe your objectives..."]</label>
+[submit "Send Inquiry & Request Quote"]
